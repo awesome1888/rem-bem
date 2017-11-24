@@ -1,0 +1,21 @@
+{
+  "name": "rem-bem",
+  "version": "1.0.0",
+  "description": "A LESS macros library that is useful for rem-based markups in the best traditions of BEM",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "less",
+    "rem",
+    "markup",
+    "css",
+    "template",
+    "macros",
+    "bem"
+  ],
+  "author": "Sergei Gannochenko",
+  "email" : "gannochenko.sv@gmail.com",
+  "license": "MIT"
+}

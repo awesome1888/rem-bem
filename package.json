@@ -16,6 +16,10 @@
     "bem"
   ],
   "author": "Sergei Gannochenko",
-  "email" : "gannochenko.sv@gmail.com",
-  "license": "MIT"
+  "email": "gannochenko.sv@gmail.com",
+  "license": "MIT",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/awesome1888/rem-bem"
+  }
 }

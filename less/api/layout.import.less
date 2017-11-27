@@ -115,9 +115,15 @@
 	._flex-align-items_center();
 }
 
-._content_row() {
+._content_row(@align: 'center') {
 	._flex();
-	._flex-align-items_center();
+
+	& when (@align = 'center') {
+		._flex-align-items_center();
+	}
+	& when (@align = 'top') {
+		._flex-align-items_start();
+	}
 }
 
 // display

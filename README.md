@@ -18,21 +18,21 @@ somewhere inside your `/client/style/index.less` folder.
 
 ## The Concept
 
-`@offset` is a basic metric unit, which equals to `1rem`
+`@rb-offset` is a basic metric unit, which equals to `1rem`
 
 You can use mixins to include inside your LESS declaration, like the following:
 
 ~~~~
 .my_button
 {
-    ._padding_x(2); // add padding equals to @offset * 2
-    ._margin-b_x(0.5); // add margin bottom equals to @offset * 0.5
+    ._rb-padding_x(2); // add padding equals to @rb-offset * 2
+    ._rb-margin-b_x(0.5); // add margin bottom equals to @rb-offset * 0.5
 }
 ~~~~
 
 Also, you can include the pre-existed classes directly inside the tag, as BEM taught us:
 ~~~~
-<div class="padding_x2 margin-b_x0p5">Some useful information</div>
+<div class="rb-padding_x2 rb-margin-b_x0p5">Some useful information</div>
 ~~~~
 These classes always go with `!important` instructions, so they cannot be overridden with other declarations. If you do not need the class anymore, you simply remove it from the tag, don't you?
 
@@ -43,3 +43,8 @@ Will finish when have time ;)
 ## License
 
 MIT
+
+## Changelog
+
+* 28.11.2017 `v1.0.3` 
+    * Prefix "rb-" added

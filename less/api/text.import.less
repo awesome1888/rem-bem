@@ -50,13 +50,17 @@
 	line-height: 150%;
 }
 
-._rb-f-color(@color: @rb-color_black, @h-color: false) {
+._rb-f-color(@color: @rb-color_black, @h-color: false, @transition-time: 0) {
 	color: @color;
 
 	& when not(@h-color = false) {
 		&:hover {
 			color: @h-color;
 		}
+	}
+
+	& when not(@transition-time = 0) {
+		._rb-transition(color, @transition-time);
 	}
 }
 

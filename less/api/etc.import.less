@@ -21,13 +21,17 @@
 	._rb-border(transparent, 0);
 }
 
-._rb-b-color(@color: @rb-color_white, @h-color: false) {
+._rb-b-color(@color: @rb-color_white, @h-color: false, @transition-time: 0) {
 	background-color: @color;
 
 	& when not(@h-color = false) {
 		&:hover {
 			background-color: @h-color;
 		}
+	}
+
+	& when not(@transition-time = 0) {
+		._rb-transition(background-color, @transition-time);
 	}
 }
 
@@ -61,9 +65,14 @@
 ._rb-hand() {
 	cursor: pointer;
 }
-
 ._rb-pointer() {
 	._rb-hand();
+}
+._rb-grab() {
+	cursor: move;
+	cursor: grab;
+	cursor: -moz-grab;
+	cursor: -webkit-grab;
 }
 
 ._rb-round() {

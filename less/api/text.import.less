@@ -10,23 +10,6 @@
 	font-family: 'Muli', sans-serif;
 }
 
-._rb-hcolor_darken(@color: @rb-color_black, @percent: 10%) {
-	color: @color;
-	&:focus {
-		color: @color;
-	}
-	&:hover {
-		color: darken(@color, @percent);
-	}
-}
-
-._rb-no-decoration() {
-	text-decoration: none;
-	&:hover {
-		text-decoration: none;
-	}
-}
-
 ._rb-ws_no-wrap() {
 	white-space: nowrap;
 }
@@ -91,4 +74,14 @@
 	&:hover {
 		text-decoration: none;
 	}
+}
+
+._rb-no-decoration() {
+	text-decoration: none;
+	&:hover {
+		text-decoration: none;
+	}
+}
+._rb-no-underline() {
+	._rb-no-decoration();
 }

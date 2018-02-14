@@ -1,6 +1,6 @@
 {
   "name": "rem-bem",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A LESS macros library that is useful for rem-based markups in the best traditions of BEM",
   "main": "index.js",
   "scripts": {

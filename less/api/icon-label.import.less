@@ -1,7 +1,8 @@
-._rb-icon-label(@code: 'help') {
+._rb-icon-label(@code: 'help', @size: inherit) {
 	._rb-relative();
 	._rb-padding-l_x(1.5);
 
+	font-size: @size;
 	line-height: 150%;
 
 	&:before {
@@ -10,7 +11,7 @@
 
 		line-height: 100%;
 		font-family: 'Material Icons', sans-serif;
-		font-size: 16px;
+		font-size: inherit;
 		font-style: normal;
 	}
 }

@@ -28,13 +28,17 @@
 	._rb-ws_pre();
 }
 
-._rb-f-size_x(@mp: 1) {
+// todo: add letter-spacing
+._rb-f-size_x(@mp: 1, @lh: 150%) {
 	font-size: @rb-offset * @mp;
-	line-height: 150%;
+	line-height: @lh;
 }
 
 ._rb-f-color(@color: @rb-color_black, @h-color: false, @transition-time: 0) {
 	color: @color;
+	&:active {
+		color: @color;
+	}
 
 	& when not(@h-color = false) {
 		&:hover {

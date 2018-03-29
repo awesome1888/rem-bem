@@ -1,9 +1,10 @@
 ._rb-icon-label(@code: 'help', @size: inherit) {
+	// todo: probably move to flexboxes here
 	._rb-relative();
 	._rb-padding-l_x(1.5);
 
-	font-size: @size;
-	line-height: 150%;
+	//font-size: @size;
+	//line-height: 150%;
 
 	&:before {
 		._rb-absolute(4px, auto, auto, 0);
@@ -11,17 +12,7 @@
 
 		line-height: 100%;
 		font-family: 'Material Icons', sans-serif;
-		font-size: inherit;
+		font-size: @size;
 		font-style: normal;
 	}
-}
-
-#_rb-icon-label_before(@code) {
-	&:before {
-		content: @code;
-	}
-}
-
-._rb-icon-label_storage() {
-	#_rb-icon-label_before('storage');
 }

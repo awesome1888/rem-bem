@@ -1,6 +1,9 @@
 ._rb-border-rad(@amount: 1px) {
 	border-radius: @amount;
 }
+._rb-b-radius(@amount: 1px) {
+	border-radius: @amount;
+}
 ._rb-border(@color: @rb-color_silver, @width: 1px) {
 	border: @width solid @color;
 }
@@ -89,8 +92,7 @@
 	box-sizing: @model;
 }
 
-._rb-block-shadow() {
-	@opacity: 0.20;
+._rb-b-shadow(@opacity: 0.2) {
 	-webkit-box-shadow: 4px 6px 12px -3px rgba(0, 0, 0, @opacity);
 	-moz-box-shadow: 4px 6px 12px -3px rgba(0, 0, 0, @opacity);
 	box-shadow: 4px 6px 12px -3px rgba(0, 0, 0, @opacity);

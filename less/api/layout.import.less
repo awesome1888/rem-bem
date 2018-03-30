@@ -365,11 +365,8 @@
 	overflow: auto;
 }
 
-._rb-no-overflow(@t-overflow: false) {
+._rb-no-overflow() {
 	overflow: hidden;
-	& when (@t-overflow = ellipsis) {
-		text-overflow: ellipsis;
-	}
 }
 
 // groups

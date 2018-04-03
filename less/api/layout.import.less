@@ -60,6 +60,10 @@
 	-ms-flex-align: baseline;
 	align-items: baseline;
 }
+._rb-flex-align-items_stretch() {
+	-webkit-justify-content: stretch;
+	justify-content: stretch;
+}
 ._rb-flex-wrap_wrap() {
 	-webkit-flex-wrap: wrap;
 	-ms-flex-wrap: wrap;
@@ -327,26 +331,27 @@
 }
 
 // z-index
-@br-z_step: 100;
-@br-z_orbit: 99999999;
-@br-z_stratosphere: @br-z_orbit - @br-z_step;
-@br-z_everest: @br-z_stratosphere - @br-z_step;
-@br-z_elbrus: @br-z_everest - @br-z_step;
+@rb-z_step: 100;
+@rb-z_orbit: 99999;
+
+._rb-moon(){
+	z-index: @rb-z_orbit + 1 * @rb-z_step;
+}
 
 ._rb-orbit(){
-	z-index: @br-z_orbit;
+	z-index: @rb-z_orbit;
 }
 
 ._rb-stratosphere(){
-	z-index: @br-z_stratosphere;
+	z-index: @rb-z_orbit - 1 * @rb-z_step;
 }
 
 ._rb-everest(){
-	z-index: @br-z_everest;
+	z-index: @rb-z_orbit - 2 * @rb-z_step;
 }
 
 ._rb-elbrus(){
-	z-index: @br-z_elbrus;
+	z-index: @rb-z_orbit - 3 * @rb-z_step;
 }
 
 // overflow & scroll

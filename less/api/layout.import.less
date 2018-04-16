@@ -157,15 +157,33 @@
 	left: @left;
 	right: @right;
 }
+._rb-fixed-cover() {
+	position: fixed;
+	._rb-cover();
+}
+
 ._rb-relative() {
 	position: relative;
 }
+
 ._rb-absolute(@top: auto, @right: auto, @bottom: auto, @left: auto) {
 	position: absolute;
 	top: @top;
 	bottom: @bottom;
 	left: @left;
 	right: @right;
+}
+._rb-absolute-tr(@offs: 0) {
+	._rb-absolute(@offs, @offs);
+}
+._rb-absolute-tl(@offs: 0) {
+	._rb-absolute(@offs, auto, auto, @offs);
+}
+._rb-absolute-bl(@offs: 0) {
+	._rb-absolute(auto, auto, @offs, @offs);
+}
+._rb-absolute-br(@offs: 0) {
+	._rb-absolute(auto, @offs, @offs);
 }
 ._rb-absolute-stick-top() {
 	position: absolute;
@@ -193,6 +211,7 @@
 	position: absolute;
 	._rb-cover();
 }
+
 ._rb-absolute-center(@h, @w, @pH, @pW: @pH) {
 	top: calc(~"@{pH} / 2 - (@{h} / 2)");
 	left: calc(~"@{pW} / 2 - (@{w} / 2)");
@@ -383,19 +402,22 @@
 
 	._rb-margin-b_x(@mp-v * -1);
 	._rb-margin-r_x(@mp-h * -1);
-
-	//& when (@horizontal = false) {
-	//}
 }
 
 ._rb-group_x(@mp: 1, @mp-v: @mp){
 	#rb-make_group(@mp, @mp-v);
 }
-
-._rb-group_inline_x(@mp: 1) {
+._rb-group_h_x(@mp: 1) {
 	& > * {
 		&:not(:last-child) {
 			._rb-margin-r_x(@mp);
+		}
+	}
+}
+._rb-group_v_x(@mp: 1) {
+	& > * {
+		&:not(:last-child) {
+			._rb-margin-b_x(@mp);
 		}
 	}
 }

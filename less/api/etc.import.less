@@ -54,6 +54,10 @@
 	}
 }
 
+._rb-b-color_hover-darken(@color, @transition-time: 0) {
+	._rb-b-color(@color, darken(@color, 10%), @transition-time);
+}
+
 ._rb-bg_cover() {
 	background-size: cover;
 	background-repeat: no-repeat;
